@@ -1,0 +1,17 @@
+<template>
+  <div>
+    <navbar/>
+    <n-grid x-gap="12" :cols="4">
+      <n-gi offset="1" span="2">
+        <slot />
+      </n-gi>
+      <n-gi>
+        <div></div>
+      </n-gi>
+    </n-grid>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { NGrid, NGi } from 'naive-ui'
+</script>
