@@ -1,7 +1,7 @@
 <template>
-  <n-button>naive-ui</n-button>
+  <ReactiveTextarea />
 </template>
 
 <script lang="ts" setup>
-  import { NButton } from 'naive-ui'
+  import ReactiveTextarea from '~~/components/form/reactive-textarea.vue'
 </script>
