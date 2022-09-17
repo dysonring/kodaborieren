@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLayout name="centered-half-layout">
+    <NuxtLayout name="full-width-layout">
       <NuxtPage />
     </NuxtLayout>
   </div>
