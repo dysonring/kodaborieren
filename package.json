@@ -1,0 +1,30 @@
+{
+  "name": "party-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "keywords": [],
+  "author": "Viki Val",
+  "license": "ISC",
+  "dependencies": {
+    "@kodadot1/minimark": "^0.0.1-rc.10",
+    "@kodadot1/sub-api": "^0.1.1-alpha.1",
+    "@supabase/supabase-js": "^1.35.6",
+    "ohmyfetch": "^0.4.18",
+    "vue-loading-overlay": "^5.0.3"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.1.105",
+    "axios": "^0.27.2",
+    "naive-ui": "^2.33.3",
+    "nuxt": "3.0.0-rc.9",
+    "unplugin-icons": "^0.14.9"
+  }
+}
