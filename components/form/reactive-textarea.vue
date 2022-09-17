@@ -1,5 +1,5 @@
 <template>
-  <n-input v-model:value="value" type="textarea" placeholder="Basic Textarea" />
+  <n-input v-model:value="value" type="textarea" placeholder="Work on the prompt together" :rows="10" />
 </template>
 
 <script lang="ts" setup>
