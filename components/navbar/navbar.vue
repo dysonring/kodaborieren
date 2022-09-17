@@ -12,7 +12,6 @@ import {
   WineOutline as WineIcon,
   HomeOutline as HomeIcon,
 } from '@vicons/ionicons5'
-import { RouterLink } from 'vue-router'
 
 function renderIcon (icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) })
@@ -22,11 +21,9 @@ const menuOptions: MenuOption[] = [
 {
     label: () =>
       h(
-        RouterLink,
+        'a',
         {
-          to: {
-            path: '/',
-          }
+          href: '/'
         },
         { default: () => 'Going Home' }
       ),
@@ -36,11 +33,9 @@ const menuOptions: MenuOption[] = [
   {
     label: () =>
       h(
-        RouterLink,
+        'a',
         {
-          to: {
-            name: 'mint',
-          }
+          href: '/mint'
         },
         { default: () => 'Mint' }
       ),
