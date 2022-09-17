@@ -18,7 +18,6 @@ exports.handler = async (event) => {
 
   try {
     const { output } = await $fetch(url || urlInBody, {
-      method: 'POST',
       headers,
     })
     return {
