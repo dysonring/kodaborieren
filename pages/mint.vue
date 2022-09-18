@@ -32,7 +32,7 @@
   import { useMintStore } from '~~/stores/mint'
   
   const mintStore = useMintStore()
-
+  const { $gun } = useNuxtApp()
   const formRef = ref<FormInst | null>(null)
 
   const formValue = reactive({
@@ -41,6 +41,18 @@
     collectionId: 9999999,
     tokenId: 0,
   })
+
+  const copy = $gun.get('token').get('data')
+
+  watch(formValue, (s) => {
+    console.log(`formValue is ${s}`)
+    copy.put({ name: s.name, description: s.description })
+  })
+
+  copy.on(({ name, description }) => {
+    formValue.name = name
+    formValue.description = description
+  });
 
   async function handleMint() {
     try {
