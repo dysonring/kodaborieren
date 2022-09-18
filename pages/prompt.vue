@@ -4,9 +4,15 @@
     <n-space vertical>
       <ReactiveTextarea v-model="value" />
       <n-button type="primary" :disabled="!value" @click="handleMint">
-        Continue to mint
+        Render prompt & continue to mint
       </n-button>
     </n-space>
+    <p>
+      - It will take approximately less than 15 seconds to render picture in stablediffusion neural model. 
+    </p>
+    <p>
+      - Then click on next tab to mint your prompt memory.
+    </p>
   </div>
 </template>
 

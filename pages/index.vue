@@ -1,5 +1,36 @@
 <template>
   <div>
-    Hello
+    <p>
+      Hello anon, KodaBorieren is fusion of two names. 
+    </p>
+    <p>
+      German word "Kollaborieren" [kollaboriéren], which in English means collaborate. Second Koda, which is emerging NFT marketpalce on Polkadot.
+    </p>
+    <p>
+      Creating art was always individual pursuit. Adding collaborative flavour opens floodgates for anyone, especially
+      creating new prompt artists who can take moment on the chain to memo their neural render as every time they went through neural
+      nets it's unique render as they won't see again. On top of it, we believe you can share revenue from this collaborative moment with your
+      friends.
+      Other than that can create poster games where people can generate unique art for unique events in their life with
+      emotional connection to the prompt as collective. That's are brief plans.
+    </p>
+    <p>
+      We believe when we can engage it with poster games where people can contribute to each part where anyone can do each own part like shaping avatar, environment, actions and &c
+    </p>
+    <p>
+      We take this as unique opporunity open flood gates people who don't have proper access for prompt to become prompt artist till stuff is not regulated 
+    </p>
+    <p>
+      Bussines model behind idea is to have sort of credit system per word, where each person can buy credits to guarantee service sustainability for future players.
+    </p>
+    <p>
+      Co-ownership should be highlighted in way that each user will sign ther user prompt with their web3 address to preserve ownership per address if future revenue share from unique memo moment when was prompt assembled.
+    </p>
+    <p>
+      in the future we hope we can launch this as full-fledged product within KodaDot NFT marketplace among our cross-chain integration in Polkadot & Kusama.
+    </p>
+    <p>
+      Enjoy moment, till it lasts!
+    </p>
   </div>
 </template>

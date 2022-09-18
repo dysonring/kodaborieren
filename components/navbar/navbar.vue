@@ -59,7 +59,7 @@ const menuOptions: MenuOption[] = [
       h(
         'a',
         {
-          href: 'https://github.com/vikiival/kodaborate',
+          href: 'https://github.com/dysonring/kodaborieren',
           target: '_blank',
           rel: 'noopenner noreferrer'
         },
