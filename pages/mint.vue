@@ -19,7 +19,7 @@
       <n-input v-model:value="formValue.description" type="textarea" :rows="7" placeholder="Fancy description" />
     </n-form-item>
     <n-form-item>
-      <n-button secondary  @click="handleMint">
+      <n-button secondary :disabled="mintStore.previewUrl === ''"  @click="handleMint">
         Create NFT
       </n-button>
     </n-form-item>
@@ -30,6 +30,7 @@
 <script lang="ts" setup>
   import { NH2, NButton, NFormItem, NInput, FormInst, NForm, NInputNumber } from 'naive-ui';
   import { useMintStore } from '~~/stores/mint'
+  import { constructMetadata, uploadImage } from '~~/services/create'
   
   const mintStore = useMintStore()
   const { $gun } = useNuxtApp()
@@ -56,12 +57,15 @@
 
   async function handleMint() {
     try {
-      // BUILD METADATA
+      const imageHash = await uploadImage(mintStore.previewUrl)
+      const { name, description, collectionId, tokenId } = formValue
+      const metadata = await constructMetadata(name, description, imageHash)
+      console.log('metadata', metadata)
+      // bafkreibomg47lgd75k2keotr4ycnwbo3jqwmx2j2kebyb76otcuusfjukq
+      // const cb = await createNonFungibleToken(String(collectionId), String(tokenId), metadata)
       
     } catch (e) {
       console.error(e)
     }
-    
-    
   }
 </script>
