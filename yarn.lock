@@ -754,7 +754,29 @@
     eventemitter3 "^4.0.7"
     rxjs "^7.5.6"
 
-"@polkadot/keyring@^10.1.8":
+"@polkadot/extension-dapp@^0.44.2":
+  version "0.44.6"
+  resolved "https://registry.yarnpkg.com/@polkadot/extension-dapp/-/extension-dapp-0.44.6.tgz#1392293a4e97335b768b7fd216c881e67c111abd"
+  integrity sha512-PKpc50df5dzAdYp/Btr46hdAdsUatoEInp8sc4HvIrIFDHXHcFq6I73pPDeq627SxkZjBiRGVpks8KOl9b6x6A==
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@polkadot/extension-inject" "^0.44.6"
+    "@polkadot/util" "^10.1.5"
+    "@polkadot/util-crypto" "^10.1.5"
+
+"@polkadot/extension-inject@^0.44.2", "@polkadot/extension-inject@^0.44.6":
+  version "0.44.6"
+  resolved "https://registry.yarnpkg.com/@polkadot/extension-inject/-/extension-inject-0.44.6.tgz#7a9eace02af85f3a4097ed7c893467d4a401ef3d"
+  integrity sha512-IX9KS0lFsCxRbctEy14ecDYCaJHXGyJ1oJC8OMhrkI3aKYgkTAAcZhMKkGWPpra9ld8G9oma6MLnO6A8Xl1ARQ==
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@polkadot/rpc-provider" "^9.2.3"
+    "@polkadot/types" "^9.2.3"
+    "@polkadot/util" "^10.1.5"
+    "@polkadot/util-crypto" "^10.1.5"
+    "@polkadot/x-global" "^10.1.5"
+
+"@polkadot/keyring@^10.1.1", "@polkadot/keyring@^10.1.8":
   version "10.1.8"
   resolved "https://registry.yarnpkg.com/@polkadot/keyring/-/keyring-10.1.8.tgz#b872bfc87f4b5af20e98726d1d22850ac5ae3955"
   integrity sha512-fUw8ZM/pU2YILYsFA7RgpV51BTi8O4wrfGRrNDA/wZ2pdmNa+Vwc8+4HisHpOmplHeBW/SA3uD1YOoFgyyxvCQ==
@@ -763,7 +785,7 @@
     "@polkadot/util" "10.1.8"
     "@polkadot/util-crypto" "10.1.8"
 
-"@polkadot/networks@10.1.8", "@polkadot/networks@^10.1.8":
+"@polkadot/networks@10.1.8", "@polkadot/networks@^10.1.1", "@polkadot/networks@^10.1.8":
   version "10.1.8"
   resolved "https://registry.yarnpkg.com/@polkadot/networks/-/networks-10.1.8.tgz#0b07dcbe0b4685986677a27f7ac7e176b8ca10dc"
   integrity sha512-WIVgsHeFQelSKZopukoW+gVJkHdVO1Z27a0K6ttQ68DZpO/1XnTJEhwPMQxiLzOiWihua8Kh3m29olJPpdOHPQ==
@@ -795,7 +817,7 @@
     "@polkadot/util" "^10.1.8"
     rxjs "^7.5.6"
 
-"@polkadot/rpc-provider@9.4.1":
+"@polkadot/rpc-provider@9.4.1", "@polkadot/rpc-provider@^9.2.3":
   version "9.4.1"
   resolved "https://registry.yarnpkg.com/@polkadot/rpc-provider/-/rpc-provider-9.4.1.tgz#3f05f9f70bb36d38503acf99852460cffac29af1"
   integrity sha512-JBq049KGpM6pDkgbxiADZG1cuTbBcfEJer466SVp54fGaF7ZfpWN6yb9pQNNkHvvx6rzPnxrTxWpqJXHlI+fmw==
@@ -862,7 +884,7 @@
     "@babel/runtime" "^7.19.0"
     "@polkadot/util" "^10.1.8"
 
-"@polkadot/types@9.4.1":
+"@polkadot/types@9.4.1", "@polkadot/types@^9.2.3":
   version "9.4.1"
   resolved "https://registry.yarnpkg.com/@polkadot/types/-/types-9.4.1.tgz#a713efdb5aa736a736ad186df82dd4c6a82ad0a6"
   integrity sha512-vUPHqlBS5neNmI+8IgJxywCL3izdCgd3SrMKWM/xlxzhGh8zfBXaGiRu1sreEk4yuNCAMMWYYDp+eqecZ6wXGA==
@@ -876,7 +898,32 @@
     "@polkadot/util-crypto" "^10.1.8"
     rxjs "^7.5.6"
 
-"@polkadot/util-crypto@10.1.8", "@polkadot/util-crypto@^10.1.8":
+"@polkadot/ui-keyring@2.9.2":
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/ui-keyring/-/ui-keyring-2.9.2.tgz#aa4bfc05bbf488fa5cab085e611ab2f1e486d7b1"
+  integrity sha512-UCanEWFw1A9UT+j9V4nbUGDdrUNUzhoi/zDPlp69CoOEk9iF7GqTm0gUvQCI05Jyo6jkYSvWaOwATjeKPw6a+Q==
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@polkadot/keyring" "^10.1.1"
+    "@polkadot/ui-settings" "2.9.2"
+    "@polkadot/util" "^10.1.1"
+    "@polkadot/util-crypto" "^10.1.1"
+    mkdirp "^1.0.4"
+    rxjs "^7.5.6"
+    store "^2.0.12"
+
+"@polkadot/ui-settings@2.9.2":
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/ui-settings/-/ui-settings-2.9.2.tgz#c83f782b6dc874494f52b43adac1b27b2893f791"
+  integrity sha512-c18ah/Wkl3nf5HnQqfgruo/Pz/Xc1wonrgHQRlbKWnPJI2lhRHAospKQFpv431xNix3GrkZdJ9rpf39xDJ3f1w==
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@polkadot/networks" "^10.1.1"
+    "@polkadot/util" "^10.1.1"
+    eventemitter3 "^4.0.7"
+    store "^2.0.12"
+
+"@polkadot/util-crypto@10.1.8", "@polkadot/util-crypto@^10.1.1", "@polkadot/util-crypto@^10.1.5", "@polkadot/util-crypto@^10.1.8":
   version "10.1.8"
   resolved "https://registry.yarnpkg.com/@polkadot/util-crypto/-/util-crypto-10.1.8.tgz#344bb1a1475baa66fb8feb621a79f41943904543"
   integrity sha512-9kKkYgAnBUZ1xxFeaYZUt9EdwSao2DbXMKp0WsKHTztslZllaXbj6seOqwRXqkKflXKcS66GQxaJZxRm2MyYpA==
@@ -893,7 +940,7 @@
     ed2curve "^0.3.0"
     tweetnacl "^1.0.3"
 
-"@polkadot/util@10.1.8", "@polkadot/util@^10.1.8":
+"@polkadot/util@10.1.8", "@polkadot/util@^10.1.1", "@polkadot/util@^10.1.5", "@polkadot/util@^10.1.8":
   version "10.1.8"
   resolved "https://registry.yarnpkg.com/@polkadot/util/-/util-10.1.8.tgz#8c6b9c23d4608cc020b5d5f187befa3ab585ab11"
   integrity sha512-o5v/g3r2p9MZWzw0zCEHwG0s7m1t+OhfRBWahgx8Sy5lSs15GSkLyOwIwmEx9F0yNGsV3SEgdBJA65NYND718A==
@@ -975,7 +1022,7 @@
     "@types/node-fetch" "^2.6.2"
     node-fetch "^3.2.10"
 
-"@polkadot/x-global@10.1.8", "@polkadot/x-global@^10.1.8":
+"@polkadot/x-global@10.1.8", "@polkadot/x-global@^10.1.5", "@polkadot/x-global@^10.1.8":
   version "10.1.8"
   resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-10.1.8.tgz#4843a2eef47939b612283c2a24f9df0fe321bc4f"
   integrity sha512-j5043cJj2hpcmb0xUw+RJoeGNR1qedStKAGLm26t9j0zT0CwtX+DhG6riDE6ZyzyAQkuvZk/igATgKG8TnzTxw==
@@ -3654,7 +3701,7 @@ mkdirp@^0.5.1, mkdirp@^0.5.5:
   dependencies:
     minimist "^1.2.6"
 
-mkdirp@^1.0.3:
+mkdirp@^1.0.3, mkdirp@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
@@ -4896,6 +4943,11 @@ std-env@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.2.1.tgz#00e260ec3901333537125f81282b9296b00d7304"
   integrity sha512-D/uYFWkI/31OrnKmXZqGAGK5GbQRPp/BWA1nuITcc6ICblhhuQUPHS5E2GSCVS7Hwhf4ciq8qsATwBUxv+lI6w==
+
+store@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/store/-/store-2.0.12.tgz#8c534e2a0b831f72b75fc5f1119857c44ef5d593"
+  integrity sha512-eO9xlzDpXLiMr9W1nQ3Nfp9EzZieIQc10zPPMP5jsVV7bLOziSFFBP0XoDXACEIFtdI+rIz0NwWVA/QVJ8zJtw==
 
 "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
