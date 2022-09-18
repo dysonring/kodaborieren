@@ -1,45 +1,45 @@
 <template>
-  <n-notification-provider>
-    <n-h2>Collaborative Prompts</n-h2>
-    <n-space vertical>
-      <ReactiveTextarea v-model="value" />
-      <n-button type="primary" :disabled="!value" @click="handleMint">
-        Continue to mint
+  <div>
+    <n-h2>Mint your NFT</n-h2>
+    <nuxt-img v-if="mintStore.previewUrl" :src="mintStore.previewUrl" />
+    <n-form
+    ref="formRef"
+    :model="formValue"
+  >
+    <n-form-item label="Name" path="name">
+      <n-input v-model:value="formValue.name" placeholder="NFT Name" />
+    </n-form-item>
+    <n-form-item label="Description" path="description">
+      <n-input v-model:value="formValue.description" type="textarea" :rows="7" placeholder="Fancy description" />
+    </n-form-item>
+    <n-form-item>
+      <n-button secondary  @click="handleMint">
+        Create NFT
       </n-button>
-    </n-space>
-  </n-notification-provider>
+    </n-form-item>
+  </n-form>
+  </div>
 </template>
 
 <script lang="ts" setup>
-  import ReactiveTextarea from '~~/components/form/reactive-textarea.vue'
-  import { NH2, NButton, NSpace, useNotification, NNotificationProvider } from 'naive-ui';
+  import { NH2, NButton, NFormItem, NInput, FormInst, NForm } from 'naive-ui';
   import { useMintStore } from '~~/stores/mint'
-  import { createPrompt } from '~~/services/lambda'
+  
+  const mintStore = useMintStore()
 
-  const value = ref('')
-  const notification = useNotification()
+  const formRef = ref<FormInst | null>(null)
+
+  const formValue = reactive({
+    name: '',
+    description: `Based on a prompt from ${mintStore.prompt}`,
+  })
 
   async function handleMint() {
     try {
-      const mintStore = useMintStore()
-      const promptUrl = await createPrompt(value.value)
-      notification.info({
-        content: 'Generating your prompt...',
-        meta: ' After 10 seconds you will be redirected to the mint',
-        duration: 10000,
-        keepAliveOnHover: true
-      })
-      setTimeout(() => {
-        mintStore.finalizePrompt({ promptUrl , prompt: value.value })
-      }, 8000)
+      // BUILD METADATA
+      
     } catch (e) {
       console.error(e)
-      notification.error({
-        content: 'Error while communitating with the server',
-        meta: `${e.message}`,
-        duration: 2500,
-        keepAliveOnHover: true
-      })
     }
     
     
