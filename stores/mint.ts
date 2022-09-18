@@ -16,6 +16,7 @@ export const useMintStore = defineStore('mint', {
       const previewUrl = await resolvePrompt(promptState.promptUrl)
       gun.get('token').get('initial').put({ prompt: promptState.prompt, previewUrl });
       gun.get('token').get('paste').put('');
+      gun.get('token').get('route').put('/mint');
       this.previewUrl = previewUrl
     },
   },

@@ -17,6 +17,15 @@
   import { createPrompt } from '~~/services/lambda'
 
   const value = ref('')
+  const { $gun } = useNuxtApp()
+
+  const welcome = $gun.get('token').get('route')
+
+  welcome.on((data) => {
+    if (data === '/mint') {
+      navigateTo(data)
+    }
+  });
 
   async function handleMint() {
     try {

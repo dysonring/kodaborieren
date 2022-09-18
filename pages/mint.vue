@@ -58,6 +58,12 @@
 
   const copy = $gun.get('token').get('data')
 
+  const welcome = $gun.get('token').get('route')
+
+  setTimeout(() => {
+    welcome.put('')
+  }, 1000)
+
   watch(formValue, () => {
     copy.put({ name: formValue.name, description: formValue.description })
   })
