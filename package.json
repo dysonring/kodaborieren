@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.1.105",
+    "@nuxt/image-edge": "^1.0.0-27719579.87dcdf2",
     "@vicons/ionicons5": "^0.12.0",
     "naive-ui": "^2.33.3",
     "nuxt": "3.0.0-rc.9",
