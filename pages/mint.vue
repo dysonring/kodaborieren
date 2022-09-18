@@ -6,6 +6,12 @@
     ref="formRef"
     :model="formValue"
   >
+    <n-form-item :span="12" label="Collection" path="collectionId">
+        <n-input-number v-model:value="formValue.collectionId" :min="9999999" />
+    </n-form-item>
+    <n-form-item label="Token" path="tokenId">
+        <n-input-number v-model:value="formValue.tokenId" :min="0" />
+    </n-form-item>
     <n-form-item label="Name" path="name">
       <n-input v-model:value="formValue.name" placeholder="NFT Name" />
     </n-form-item>
@@ -22,7 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { NH2, NButton, NFormItem, NInput, FormInst, NForm } from 'naive-ui';
+  import { NH2, NButton, NFormItem, NInput, FormInst, NForm, NInputNumber } from 'naive-ui';
   import { useMintStore } from '~~/stores/mint'
   
   const mintStore = useMintStore()
@@ -32,6 +38,8 @@
   const formValue = reactive({
     name: '',
     description: `Based on a prompt from ${mintStore.prompt}`,
+    collectionId: 9999999,
+    tokenId: 0,
   })
 
   async function handleMint() {
