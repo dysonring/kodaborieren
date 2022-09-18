@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { resolvePrompt } from '~~/services/lambda'
+import { gun } from '~~/utils/gun'
 
 export const useMintStore = defineStore('mint', {
   state: () => {
@@ -13,6 +14,7 @@ export const useMintStore = defineStore('mint', {
     async finalizePrompt(promptState: { prompt: string, promptUrl: string }) {
       this.prompt = promptState.prompt
       const previewUrl = await resolvePrompt(promptState.promptUrl)
+      gun.get('token').get('initial').put({ prompt: promptState.prompt, previewUrl })
       this.previewUrl = previewUrl
     },
   },

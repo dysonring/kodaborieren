@@ -1,7 +1,7 @@
 <template>
   <div>
     <n-h2>Mint your NFT</n-h2>
-    <nuxt-img v-if="mintStore.previewUrl" :src="mintStore.previewUrl" />
+    <nuxt-img v-if="original.previewUrl" :src="original.previewUrl" />
     <n-form
     ref="formRef"
     :model="formValue"
@@ -19,7 +19,7 @@
       <n-input v-model:value="formValue.description" type="textarea" :rows="7" placeholder="Fancy description" />
     </n-form-item>
     <n-form-item>
-      <n-button secondary :disabled="mintStore.previewUrl === ''"  @click="handleMint">
+      <n-button secondary :disabled="original.previewUrl === ''"  @click="handleMint">
         Create NFT
       </n-button>
     </n-form-item>
@@ -36,17 +36,27 @@
   const { $gun } = useNuxtApp()
   const formRef = ref<FormInst | null>(null)
 
+  const original = reactive({ 
+    previewUrl: mintStore.previewUrl,
+    prompt: mintStore.prompt,
+   })
+
   const formValue = reactive({
     name: '',
-    description: `Based on a prompt from ${mintStore.prompt}`,
-    collectionId: 9999999,
+    description: '',
+    collectionId: 1000,
     tokenId: 0,
+  })
+
+  const initialStore = $gun.get('token').get('initial')
+  initialStore.once((data) => {
+    original.prompt = data.prompt
+    original.previewUrl = data.previewUrl
   })
 
   const copy = $gun.get('token').get('data')
 
   watch(formValue, (s) => {
-    console.log(`formValue is ${s}`)
     copy.put({ name: s.name, description: s.description })
   })
 

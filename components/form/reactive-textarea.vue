@@ -9,7 +9,7 @@
   const { $gun } = useNuxtApp()
   const emit = defineEmits(['update:modelValue'])
 
-  const copy = $gun.get('test').get('paste');
+  const copy = $gun.get('token').get('paste');
   copy.on((data) => { value.value = data });
 
 
