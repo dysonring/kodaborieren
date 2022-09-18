@@ -10,3 +10,7 @@
 //     })
 //   })
 // }
+
+export default defineNuxtPlugin(() => {
+  console.log('REGISTER KEYRING')
+})
