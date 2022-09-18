@@ -2,7 +2,6 @@ const { $fetch } = require('ohmyfetch')
 
 exports.handler = async (event) => {
   const url = event.queryStringParameters.value
-  const { url: urlInBody } = JSON.parse(event.body || {})
 
   if (!url) {
     return {
@@ -17,7 +16,7 @@ exports.handler = async (event) => {
   }
 
   try {
-    const { output } = await $fetch(url || urlInBody, {
+    const { output } = await $fetch(url, {
       headers,
     })
     return {
