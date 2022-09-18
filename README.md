@@ -1,48 +1,32 @@
-# Frank Todo
+# Kodaborieren
 
-- [x] Insert Worm instead of ❓
-- [x] Fix responsiveness
-- [ ] add Button Clicks
+> Because german is a very expressive language, it is very hard to translate it into english. So I decided to write this in german. If you want to translate it, feel free to do so. - **"Github Copilot (06:58 am)"**
 
-```javascript
-import axios from "axios";
-const BASE_URL = `vikiWillProvideThisSoJustCopyPaste`;
+## What does this app do?
 
-async function doEmote(emote: string) {
-  this.isLoading = true;
-  const body = { value: emote };
-  const { status, data } = await axios.post(BASE_URL, body);
-  this.isLoading = flase;
-}
-```
+Colaborative, permisionless AI minter.
 
-- [ ] Change Styling
+## Tech Stack
 
-# Nuxt 3 Minimal Starter
-
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
+- [ ] Nuxt 3
+- [ ] Naive UI
+- [ ] NFT Storage
+- [ ] Netlify Functions
+ 
+Colaborative, permisionless AI minter.
 
 ## Development Server
 
-Start the development server on http://localhost:3000
+Install dependencies (yarn for best compatibility with Netlify)
 
 ```bash
-npm run dev
+yarn
+```
+
+Start the development server on http://localhost:8888
+
+```bash
+netlify dev
 ```
 
 ## Production
