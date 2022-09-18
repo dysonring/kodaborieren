@@ -49,9 +49,10 @@
   })
 
   const initialStore = $gun.get('token').get('initial')
-  initialStore.on((data) => {
-    console.log('initialStore',data)
+  initialStore.once((data) => {
+    console.log('initialStore',data, data.prompt)
     original.prompt = data.prompt
+    formValue.description = `From the prompt: ${data.prompt}`
     original.previewUrl = data.previewUrl
   })
 
