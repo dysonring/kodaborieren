@@ -2,6 +2,8 @@
 
 > Because german is a very expressive language, it is very hard to translate it into english. So I decided to write this in german. If you want to translate it, feel free to do so. - **"Github Copilot (06:58 am)"**
 
+![](https://replicate.com/api/models/stability-ai/stable-diffusion/files/a9cde7c9-f02f-4876-92f5-255a1c43a3e1/out-0.png)
+
 ## What does this app do?
 
 Colaborative, permisionless AI minter.
