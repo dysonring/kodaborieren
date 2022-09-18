@@ -7,7 +7,7 @@
     :model="formValue"
   >
     <n-form-item :span="12" label="Collection" path="collectionId">
-        <n-input-number v-model:value="formValue.collectionId" :min="9999999" />
+        <n-input-number v-model:value="formValue.collectionId" :min="1000" />
     </n-form-item>
     <n-form-item label="Token" path="tokenId">
         <n-input-number v-model:value="formValue.tokenId" :min="0" />
