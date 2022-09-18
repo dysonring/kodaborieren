@@ -1,7 +1,7 @@
 import { $fetch } from 'ohmyfetch'
 
 export const createPrompt = async (prompt: string): Promise<string> => {
-  const { urls } = await $fetch<{ urls: { get: string } }>('https://kodaborieren.netlify.app/api/create', {
+  const { urls } = await $fetch<{ urls: { get: string } }>('/api/create', {
     method: 'POST',
     body: JSON.stringify({ prompt }),
   })
@@ -11,7 +11,7 @@ export const createPrompt = async (prompt: string): Promise<string> => {
 }
 
 export const resolvePrompt = async (promptUrl: string): Promise<string> => {
-  const { output } = await $fetch<{ output: string[] }>(`https://kodaborieren.netlify.app/api/resolve`, {
+  const { output } = await $fetch<{ output: string[] }>(`/api/resolve`, {
     params: { value: promptUrl },
   })
   return output[0]

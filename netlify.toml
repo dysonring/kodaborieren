@@ -1,5 +1,5 @@
 [build]
-  functions = "./functions"
+  functions = "functions"
 
 [[redirects]]
   from = "/api/*"
@@ -7,9 +7,10 @@
   status = 200
 
 [[headers]]
+  # Define which paths this specific [[headers]] block will cover.
   for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Content-Type-Options = "nosniff"
