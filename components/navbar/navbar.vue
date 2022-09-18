@@ -35,12 +35,24 @@ const menuOptions: MenuOption[] = [
       h(
         'a',
         {
+          href: '/prompt'
+        },
+        { default: () => 'Make' }
+      ),
+    key: 'promp',
+    icon: renderIcon(PersonIcon)
+  },
+  {
+    label: () =>
+      h(
+        'a',
+        {
           href: '/mint'
         },
-        { default: () => 'Mint' }
+        { default: () => 'Mint NFT' }
       ),
     key: 'mint',
-    icon: renderIcon(PersonIcon)
+    icon: renderIcon(WineIcon)
   },
   {
     label: () =>
