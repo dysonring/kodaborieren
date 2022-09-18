@@ -49,18 +49,20 @@
   })
 
   const initialStore = $gun.get('token').get('initial')
-  initialStore.once((data) => {
+  initialStore.on((data) => {
+    console.log('initialStore',data)
     original.prompt = data.prompt
     original.previewUrl = data.previewUrl
   })
 
   const copy = $gun.get('token').get('data')
 
-  watch(formValue, (s) => {
-    copy.put({ name: s.name, description: s.description })
+  watch(formValue, () => {
+    copy.put({ name: formValue.name, description: formValue.description })
   })
 
   copy.on(({ name, description }) => {
+    console.log('copy',name,description)
     formValue.name = name
     formValue.description = description
   });

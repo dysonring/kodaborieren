@@ -24,7 +24,6 @@
       const promptUrl = await createPrompt(value.value)
       setTimeout(() => {
         mintStore.finalizePrompt({ promptUrl , prompt: value.value })
-        navigateTo('/mint')
       }, 6000)
     } catch (e) {
       console.error(e)
